@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <title>Form</title>
+
+  </head>
+  <body>
+      <div class="container">
+        <form class="row g-3 border border-1 rounded-1" >
+            <!-- aqui esta el encabezado con los bordes redondeados y con un fondo gris claro -->
+            <div class="col-md-12 bg-light border border-1 rounded-1">
+                <h2>Payment Form Example</h2>
+            </div>
+            <div class="alert-sm alert-danger border border-danger rounded-1 " role="alert">
+                <p> <strong>Some fields are missing</strong></p>
+            </div>
+            <!-- Aqui se encuentra el campo de card aplicandole una validación de campo vacío  -->
+            <div class="col-md-5">
+                <label for="inputCard4" class="form-label">Card#</label>
+                <input type="text" class="form-control" placeholder="XXXXXXXXXXXXXXX"  id="card" required>
+                <div class="invalid-feedback"></div>
+            </div>
+            <!-- Aqui se encuentra el campo de CVC aplicandole una validación de campo vacío  -->
+            <div class="col-md-3">
+                <label for="inputCVC4" class="form-label">CVC#</label>
+                <input type="text" class="form-control" placeholder="0000" required>
+                <div class="invalid-feedback"></div>
+            </div>
+            <!-- Aqui se encuentra el campo de Amount aplicandole una validación de campo vacío  -->
+            <div class="col-md-4">
+                <label for="inputAmount" class="form-label">Amount</label>
+                <input type="text" class="form-control" required>
+                <div class="invalid-feedback"></div>
+            </div>
+            <!-- Aqui se encuentra el campo de FirstName aplicandole una validación de campo vacío  -->
+            <div class="col-md-6">
+                <label for="inputAddress" class="form-label">First Name</label>
+                <input type="text" class="form-control" required>
+                <div class="invalid-feedback"></div>
+            </div>
+            <!-- Aqui se encuentra el campo de LastName aplicandole una validación de campo vacío  -->
+            <div class="col-md-6">
+                <label for="inputAddress" class="form-label">Last Name</label>
+                <input type="text" class="form-control" required>
+                <div class="invalid-feedback"></div>
+            </div>
+            <!-- Aqui se encuentra el campo de City aplicandole una validación de campo vacío  -->
+            <div class="col-md-6">
+                <label for="inputCity" class="form-label">City</label>
+                <input type="text" class="form-control" id="inputCity" required>
+                <div class="invalid-feedback"></div>
+            </div>
+            <!-- Aqui se encuentra el campo de state aplicandole una validación de campo vacío, a diferencia de los otros para validar se coloca el "required" en el select  -->
+            <div class="col-md-3">
+                <label for="inputAddress2" class="form-label">State</label>
+                <select id="inputState" class="form-select" required>
+                <option selected>Pick a state</option>
+                <option>...</option>
+                </select>
+                <div class="invalid-feedback"></div>
+            </div>
+            <!-- Aqui se encuentra el campo de Postal Code aplicandole una validación de campo vacío  -->
+            <div class="col-md-3">
+                <label for="inputAddress2" class="form-label">Postal Code</label>
+                <input type="text" class="form-control" required>
+                <div class="invalid-feedback"></div>
+            </div>
+            <!-- Aqui se encuentra el campo de seleccion de tarjeta a utilizar  -->
+            <div class="col-md-6">
+                <label for="inputZip" class="form-label">We accept:</label>
+                <div class="container, col-md-8 bg-secondary text-white border border-1 rounded-1" >
+                        <div class="form-check form-check-inline">
+                            <!-- aqui esta el icono de mastercard -->
+                            <!-- se coloca un margin-top (mt-3) para acomodar la casilla del check -->
+                            <input class="form-check-input mt-3" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                              <!-- aqui se utiliza un font-size para agrandar los iconos "fs-2" -->
+                            <label class="form-check-label fs-2" for="inlineRadio1"><i class="fab fa-cc-mastercard"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <!-- aqui esta el icono de visa -->
+                            <input class="form-check-input mt-3" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <!-- aqui se utiliza un font-size para agrandar los iconos "fs-2" -->
+                            <label class="form-check-label fs-2" for="inlineRadio2"><i class="fab fa-cc-visa"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <!-- aquí esta el icono de club -->
+                            <input class="form-check-input mt-3" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                              <!-- aqui se utiliza un font-size para agrandar los iconos "fs-2" -->
+                            <label class="form-check-label fs-2" for="inlineRadio2"><i class="fab fa-cc-diners-club"></i></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <!-- aqui esta el icono de AmericanExpress -->
+                            <input class="form-check-input mt-3" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                            <!-- aqui se utiliza un font-size para agrandar los iconos "fs-2" -->
+                            <label class="form-check-label fs-2" for="inlineRadio2"><i class="fab fa-cc-amex"></i></label>
+                        </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <!-- para hacer un input de texto largo se utiliza "textarea" -->
+                <label for="inputZip" class="form-label">Message</label>
+                <textarea class="form-control"id="floatingTextarea2" style="height: 100px"></textarea>
+                <div id="emailHelp" class="form-text">Add any notes here.</div>
+            </div>
+            <div class="d-flex justify-content-end bg-light border border-1 rounded-1" >
+                <!-- Se utiliza una flexbox para colocar los botones al final, y que sea submit el de "Send" para la validación de campos -->
+                <div class="p-2 bd-highlight"><button type="button" class="btn btn-secondary">Cancel</button></div>
+                <div class="p-2 bd-highlight"><button type="submit" class="btn btn-primary">Send</button></div>
+            </div>
+        </form>
+    </div>
+
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  </body>
+</html>
